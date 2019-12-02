@@ -9,8 +9,9 @@ $result = $alumnos->find();
 
 foreach ($result as $entry) {
     $nombre = "          ".$entry['nombre']." ".$entry['apellido'];
+    $matricula = $entry['nMatricula'];
     
-    echo "<p> $nombre </p>";
+    echo "<a href='./DetalleAlumno?matricula=$matricula'> $nombre </a>";
     echo "<p> Asignaturas: </p>";
 
     foreach($entry['notasAlumno'] as $asig){
