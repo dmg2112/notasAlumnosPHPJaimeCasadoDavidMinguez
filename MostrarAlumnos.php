@@ -11,7 +11,7 @@ foreach ($result as $entry) {
     $nombre = "          ".$entry['nombre']." ".$entry['apellido'];
     $matricula = $entry['nMatricula'];
     
-    echo "<a href='./DetalleAlumno?matricula=$matricula'> $nombre </a>";
+    echo "<a href='./DetalleAlumno.php?matricula=$matricula'> $nombre </a>";
     echo "<p> Asignaturas: </p>";
 
     foreach($entry['notasAlumno'] as $asig){
