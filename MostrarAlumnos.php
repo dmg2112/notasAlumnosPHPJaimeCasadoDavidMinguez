@@ -16,7 +16,16 @@ foreach ($result as $entry) {
     foreach($entry['notasAlumno'] as $asig){
         $nombreAsig = $asig['nombreAsignatura'];
         echo "<p> &nbsp;&nbsp;&nbsp;&nbsp;".$nombreAsig."</p>";
-        echo "<p> &nbsp;&nbsp;&nbsp;&nbsp notas en la asignatura:</p>";
+        echo "<p> &nbsp;&nbsp;&nbsp;&nbspNotas en la asignatura:</p>";
+
+        $notasAsig = $asig['notasAsignatura'];
+        foreach($notasAsig as $asig){
+            $num = $asig["numTarea"];
+            $nota = $asig["notaTarea"];
+
+            echo "<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Tarea: ".$num."</p>";
+            echo "<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nota en la tarea ".$nota."</p>";
+        }
         
         
     }
