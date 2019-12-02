@@ -1,0 +1,21 @@
+[
+    {
+        "codigoAsignatura": "A01",
+        "nombreAsignatura": "Programacion en Swift",
+        "tareas": [
+            {
+                "codigoTarea": 1,
+                "alumnos": [
+                    {
+                        "matricula": "UT001",
+                        "notaTarea": 0
+                    },
+                    {
+                        "matricula": "UT002",
+                        "notaTarea": 0
+                    }
+                ]
+            }
+        ]
+    }
+]
