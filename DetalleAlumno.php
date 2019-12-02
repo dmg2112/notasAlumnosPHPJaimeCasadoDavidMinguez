@@ -2,9 +2,8 @@
 
 	if(isset($_GET['matricula'])){
 		
-		$findQuery = array('matricula' => $_GET['matricula']);
+		$findQuery = array('nMatricula' => $_GET['matricula']);
 		require 'vendor/autoload.php'; // incluir lo bueno de Composer
-
 		$cliente = new MongoDB\client;
 
 		$alumnos = $cliente->ADAT_UD3_A04->alumnos;
@@ -15,12 +14,12 @@
     			$matricula = $entry['nMatricula'];
     
     			echo "<h1> $nombre </h1>";
-    			echo "<p> Asignaturas: </p>";
+    			echo "<h2> Asignaturas: </h2>";
 
     			foreach($entry['notasAlumno'] as $asig){
         			$nombreAsig = $asig['nombreAsignatura'];
-        			echo "<p> &nbsp;&nbsp;&nbsp;&nbsp;".$nombreAsig."</p>";
-        			echo "<p> &nbsp;&nbsp;&nbsp;&nbspNotas en la asignatura:</p>";
+        			echo "<h3> &nbsp;&nbsp;&nbsp;&nbsp;".$nombreAsig."</h3>";
+        			echo "<h4> &nbsp;&nbsp;&nbsp;&nbspNotas en la asignatura:</h4>";
 
         			$notasAsig = $asig['notasAsignatura'];
         			foreach($notasAsig as $asig){
