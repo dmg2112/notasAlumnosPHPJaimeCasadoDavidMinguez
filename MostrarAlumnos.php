@@ -24,8 +24,7 @@ foreach ($result as $entry) {
             $num = $asig["numTarea"];
             $nota = $asig["notaTarea"];
 
-            echo "<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Tarea: ".$num."</p>";
-            echo "<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nota en la tarea ".$nota."</p>";
+            echo "<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Tarea: ".$num." nota en la tarea ".$nota."</p>";
         }
         
         

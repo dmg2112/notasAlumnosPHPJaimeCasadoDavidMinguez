@@ -1,3 +1,11 @@
+<html>
+<body>
+
+
+
+
+
+
 <?php
 
 	if(isset($_GET['matricula'])){
@@ -26,8 +34,7 @@
             				$num = $asig["numTarea"];
             				$nota = $asig["notaTarea"];
 
-            				echo "<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Tarea: ".$num."</p>";
-            				echo "<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nota en la tarea ".$nota."</p>";
+            				echo "<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Tarea: ".$num." nota en la tarea ".$nota."</p>";
        				}
         
         
@@ -38,3 +45,20 @@
 	}
 
 ?>
+
+<form action="/action_page.php">
+  Tarea:<br>
+  <input type="text" name="firstname" value="Mickey">
+  <br>
+  Nota:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+
+
+</body>
+</html>
+
+
