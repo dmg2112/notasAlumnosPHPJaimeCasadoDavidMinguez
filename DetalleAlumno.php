@@ -1,10 +1,19 @@
-<html>
-<body>
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
-
-
+    <title>Detalle Alumno</title>
+  </head>
+  <body>
+	<div class="container-fluid">
+		<div class="row flex-row">
+<div class ="col-6">
 
 <?php
 
@@ -26,7 +35,8 @@
 
     			foreach($entry['notasAlumno'] as $asig){
         			$nombreAsig = $asig['nombreAsignatura'];
-        			echo "<h3> &nbsp;&nbsp;&nbsp;&nbsp;".$nombreAsig."</h3>";
+				$codigoAsig = $asig['codigoAsignatura'];
+        			echo "<h3> &nbsp;&nbsp;&nbsp;&nbsp;".$nombreAsig."  ".$codigoAsig."</h3>";
         			echo "<h4> &nbsp;&nbsp;&nbsp;&nbspNotas en la asignatura:</h4>";
 
         			$notasAsig = $asig['notasAsignatura'];
@@ -45,19 +55,27 @@
 	}
 
 ?>
+</div>
 
-<form action="/action_page.php">
+<form class = "col-6" action="./ActualizarNotas.php">
+Matricula:<br>
+  <input type="text" name="matricula" value="<?php echo strval($_GET['matricula']); ?>" readonly="readonly">
+  <br>
+Asignatura:<br>
+  <input type="text" name="asignatura" value="Mickey">
+  <br>
   Tarea:<br>
-  <input type="text" name="firstname" value="Mickey">
+  <input type="text" name="tarea" value="mick">
   <br>
   Nota:<br>
-  <input type="text" name="lastname" value="Mouse">
+  <input type="text" name="nota" value="mick">
   <br><br>
   <input type="submit" value="Submit">
 </form> 
 
 
-
+</div>
+</div>
 </body>
 </html>
 
