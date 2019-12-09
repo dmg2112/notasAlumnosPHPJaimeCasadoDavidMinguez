@@ -12,14 +12,23 @@
             $asig = $_GET['asignatura'];
     
             $alumnos = $cliente->ADAT_UD3_A04->alumnos;
+
+            
             
             $updateResult = $alumnos->updateOne(
-                [ 'nMatricula' => $mat,
+                [ 'nMatricula' => $matr,
             'notasAlumno.codigoAsignatura'=> $asig ],
-                [ '$set' => [ 'notasAlumno.$.notasAsignatura.$[item].notaTarea' => $nota ]],
-                ['$arrayFilters'=> [ 'item.numTarea' => $tarea ]]
+                [ '$pull' => [ 'notasAlumno.$.notasAsignatura' => ['numTarea'=> $tarea] ]]
     
             );
+            $updateResult = $alumnos->updateOne(
+                [ 'nMatricula' => $matr,
+            'notasAlumno.codigoAsignatura'=> $asig ],
+                [ '$push' => [ 'notasAlumno.$.notasAsignatura' => ['numTarea'=> $tarea , 'notaTarea'=> $nota] ]]
+    
+            );
+
+
 
             header("Location: ./DetalleAlumno.php?matricula=".$_GET['matricula']);
             

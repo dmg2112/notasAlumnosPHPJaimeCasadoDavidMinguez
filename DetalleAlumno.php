@@ -57,7 +57,7 @@
 ?>
 </div>
 
-<form class = "col-6" action="./ActualizarNotas.php">
+<form class = "col-6" action="./ActualizaNotas.php">
 Matricula:<br>
   <input type="text" name="matricula" value="<?php echo strval($_GET['matricula']); ?>" readonly="readonly">
   <br>
